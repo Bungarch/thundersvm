@@ -56,6 +56,9 @@ else ()
     endif ()
 endif ()
 
+# Disable by our kubernetes cluster unsupported instructions
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mno-avx2")
+
 if (CMAKE_VERSION VERSION_LESS "3.1")
     add_compile_options("-std=c++11")
 else ()
