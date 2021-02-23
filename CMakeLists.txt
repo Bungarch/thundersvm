@@ -58,6 +58,7 @@ endif ()
 
 # Disable by our kubernetes cluster unsupported instructions
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mno-avx2")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mno-avx512f")
 
 if (CMAKE_VERSION VERSION_LESS "3.1")
     add_compile_options("-std=c++11")
